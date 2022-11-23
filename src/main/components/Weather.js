@@ -58,7 +58,7 @@ export default function Weather() {
             .catch(error => console.log(error + "We catch error while getting data from API with city: "));
         setTimeout(() => {
             setLoading(false);
-        }, 300);
+        }, 600);
     }
 
     const saveTypedCity = (event) => {
@@ -110,14 +110,15 @@ export default function Weather() {
                                         <span className={'placeholderMessage'}>Enter name of the city</span>
                                     </div>
                                 </Form>
-                                <Col className={'weatherFirstRowCol text-center p-2'} sm={12} md={6} lg={4}>
-                                    <div
-                                        className={"d-flex justify-content-center align-items-center"}>
-                                        <img
-                                            className={'weatherImage'}
-                                            src={image}
-                                            alt={'weather foto'}
-                                        />
+                                <Col className={'weatherFirstRowCol d-flex justify-content-center align-items-center text-center p-2'} sm={12} md={6} lg={4}>
+                                    <div>
+                                        <picture>
+                                            <img
+                                                className={'weatherImage'}
+                                                src={image}
+                                                alt={'weather foto'}
+                                            />
+                                        </picture>
                                     </div>
                                 </Col>
                                 <Col className={'weatherFirstRowCol'} sm={12} md={6} lg={8}>
