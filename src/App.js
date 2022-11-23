@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Weather from "./main/components/Weather";
+import "./App.css";
+import weather from "./main/images/weather.jpg";
+import {useEffect, useState} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const getWindowSize = () => {
+    const {innerWidth, innerHeight} = window;
+    return {innerWidth, innerHeight};
 }
 
-export default App;
+export default function App() {
+    const [windowSize, setWindowSize] = useState(getWindowSize());
+
+    useEffect(() => {
+        const handleWindowResize = () => setWindowSize(getWindowSize());
+        window.addEventListener('resize', handleWindowResize);
+        return () => window.removeEventListener('resize', handleWindowResize);
+    }, []);
+
+    return (
+        <div>
+            <div>
+                {
+                    windowSize.innerWidth >= 600
+                    &&
+                    <img className={'backgroundImage'} src={weather} alt={'background foto'}/>
+                }
+            </div>
+            <div className={'App '}>
+                <div className={'main'}>
+                    <Weather/>
+                </div>
+            </div>
+        </div>
+
+    );
+}

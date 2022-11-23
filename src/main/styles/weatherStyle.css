@@ -1,0 +1,40 @@
+.weatherFirstRowCol {
+    border: 3px solid #e5d3d3;
+    display: inline-block;
+    align-items: center;
+}
+
+.inputSpace {
+    position: relative;
+}
+
+.placeholderMessage {
+    color: black;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-40%);
+    left: 25px;
+    transition: .2s;
+}
+
+.inputLabel {
+    padding: 14px 15px;
+    border-radius: 10px 0 10px 0;
+}
+
+.inputLabel:hover {
+    border: 1px solid #bbf3d0;
+    margin: 1.5px;
+}
+
+.inputLabel:focus ~ span{
+    top: 8px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.inputLabel:not(:placeholder-shown) ~span{
+    top: 8px;
+    font-size: 10px;
+    font-weight: 700;
+}

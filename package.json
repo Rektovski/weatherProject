@@ -2,6 +2,11 @@
   "name": "weather-project",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Otar Murmanishvili",
+    "email": "murmanishvili94@gmail.com",
+    "url": "otarmurmanishvili.netlify.app"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -9,7 +14,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.0",
+    "axios": "^1.2.0",
+    "bootstrap": "^5.2.3",
+    "react-bootstrap": "^2.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
