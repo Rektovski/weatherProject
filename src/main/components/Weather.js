@@ -10,6 +10,7 @@ import askMe from "../images/askMe.png";
 import Cloudy from "../images/cloudy.png";
 import Thunderstorm from "../images/thunderStorm.png";
 import {LazyLoadImage} from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const API_KEY = "7c9f352eccfb82cd64b0481db1d4f68d";
 const API_URL = "https://api.openweathermap.org/data/2.5/weather?q=";

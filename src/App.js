@@ -4,7 +4,7 @@ import "./App.css";
 export default function App() {
     return (
         <div>
-            <div className={'App backgroundImage'}>
+            <div className={'backgroundImage'}>
                 <div className={'main  '}>
                     <Weather/>
                 </div>
