@@ -1,20 +1,39 @@
 .App {
-    border-radius: 50px 0 50px 0;
 }
 
 .backgroundImage {
-    position: fixed;
-    width: 100vw;
+    /* The background image */
+    background-image: url("backgroundCover/summer.gif");
+
+    /* Set a specified height, or the minimum height for the background image */
+    min-height: 500px;
+
     height: 100vh;
-    z-index: 1;
+
+    z-index: 20;
+
+    /* Set background image to fixed (don't scroll along with the page) */
+    background-attachment: fixed;
+
+    /* Center the background image */
+    background-position: center;
+
+    /* Set the background image to no repeat */
+    background-repeat: no-repeat;
+
+    /* Scale the background image to be as large as possible */
+    background-size: cover;
 }
 
 .main {
-    display: grid;
     height: 100vh;
     width: 100vw;
-    background: rgba(47, 79, 79, 0.7);
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    justify-content: center;
     color: whitesmoke;
-    position: fixed;
-    z-index: 2;
 }
+

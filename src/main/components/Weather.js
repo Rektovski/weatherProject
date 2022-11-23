@@ -58,7 +58,7 @@ export default function Weather() {
 
     return (
         <>
-            <div>
+            <div className={'weather w-75'}>
                 <Container>
                     <Row>
                         <Form
@@ -77,7 +77,7 @@ export default function Weather() {
                         <Col className={'weatherFirstRowCol text-center p-2'} sm={12} md={6} lg={4}>
                             <img
                                 style={{width: "100%", height: "100%"}}
-                                className={'p-5'}
+                                className={'weatherImage'}
                                 src={sunRain && (sunRain === "Clear" ? Sun : Rain)}
                                 alt={'weather foto'}
                             />

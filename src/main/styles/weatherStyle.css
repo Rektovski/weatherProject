@@ -1,7 +1,19 @@
+.weather {
+    border-radius: 0 25px 0 25px;
+    padding: 20px;
+    background: rgba(47, 79, 79, 0.47);
+    color: white;
+}
+
 .weatherFirstRowCol {
     border: 3px solid #e5d3d3;
     display: inline-block;
     align-items: center;
+}
+
+.weatherImage {
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .inputSpace {
@@ -37,4 +49,12 @@
     top: 8px;
     font-size: 10px;
     font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+    .inputLabel {
+        width: 60vw;
+        padding: 14px 15px;
+        border-radius: 10px 0 10px 0;
+    }
 }
