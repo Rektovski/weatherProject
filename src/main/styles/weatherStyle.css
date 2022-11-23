@@ -23,9 +23,9 @@
 .placeholderMessage {
     color: black;
     position: absolute;
-    top: 30%;
+    top: 20%;
     transform: translateY(-40%);
-    left: 25px;
+    left: 20px;
     transition: .2s;
 }
 
