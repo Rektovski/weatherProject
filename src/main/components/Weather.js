@@ -6,7 +6,6 @@ import {supportFunctions} from "../functions/supportFunctions";
 import Rain from "../images/rain.jpg";
 import Sun from "../images/sun.png";
 
-
 const API_KEY = "7c9f352eccfb82cd64b0481db1d4f68d";
 const API_URL = "https://api.openweathermap.org/data/2.5/weather?q=";
 
@@ -75,19 +74,21 @@ export default function Weather() {
                             </div>
                         </Form>
                         <Col className={'weatherFirstRowCol text-center p-2'} sm={12} md={6} lg={4}>
-                            <img
-                                style={{width: "100%", height: "100%"}}
-                                className={'weatherImage'}
-                                src={sunRain && (sunRain === "Clear" ? Sun : Rain)}
-                                alt={'weather foto'}
-                            />
+                            <div
+                            className={"d-flex justify-content-center align-items-center"}>
+                                <img
+                                    className={'weatherImage'}
+                                    src={sunRain==="Clear" ? Sun : Rain}
+                                    alt={'weather foto'}
+                                />
+                            </div>
                         </Col>
                         <Col className={'weatherFirstRowCol'} sm={12} md={6} lg={8}>
                             <h3>City: {city}</h3>
-                            <div>Temperature: {temperature}°C</div>
+                            <div>Temperature: {Math.floor(temperature)}°C</div>
                             <div>Country code: {country}</div>
                             <div>Wind speed: {wind} m/s</div>
-                            <div>Direction: {windDirection}</div>
+                            <div>Direction: {windDirection}°, {supportFunctions.getDirectionInString(windDirection)}</div>
                             <div>{supportFunctions.getVisibility(visibility)}</div>
                         </Col>
                     </Row>

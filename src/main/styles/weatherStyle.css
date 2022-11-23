@@ -7,11 +7,11 @@
 
 .weatherFirstRowCol {
     border: 3px solid #e5d3d3;
-    display: inline-block;
-    align-items: center;
 }
 
 .weatherImage {
+    width: 100%;
+    height: 100%;
     padding: 10px;
     border-radius: 20px;
 }
