@@ -9,6 +9,7 @@ import Cold from "../images/cold-weather.gif";
 import askMe from "../images/askMe.png";
 import Cloudy from "../images/cloudy.png";
 import Thunderstorm from "../images/thunderStorm.png";
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 
 const API_KEY = "7c9f352eccfb82cd64b0481db1d4f68d";
 const API_URL = "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -58,7 +59,7 @@ export default function Weather() {
             .catch(error => console.log(error + "We catch error while getting data from API with city: "));
         setTimeout(() => {
             setLoading(false);
-        }, 600);
+        }, 100);
     }
 
     const saveTypedCity = (event) => {
@@ -113,9 +114,11 @@ export default function Weather() {
                                 <Col className={'weatherFirstRowCol d-flex justify-content-center align-items-center text-center p-2'} sm={12} md={6} lg={4}>
                                     <div>
                                         <picture>
-                                            <img
+                                            <LazyLoadImage
                                                 className={'weatherImage'}
                                                 src={image}
+                                                effect={"opacity"}
+                                                width={image.width}
                                                 alt={'weather foto'}
                                             />
                                         </picture>
