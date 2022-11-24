@@ -47,7 +47,7 @@ export default function Weather() {
 
     const setCountryInfo = (data) => {
         setCountryName(data.name.official);
-        setCountryFlag(data.flag);
+        setCountryFlag(data.flags.png);
     }
 
     const getWeather = async (event, search) => {
@@ -95,7 +95,7 @@ export default function Weather() {
                     </Spinner>
                     :
                     <div className={'weather w-75'}>
-                        <Container>
+                        <Container className={'weatherContainer'}>
                             <Row>
                                 <Form
                                     onSubmit={(event) => onGetData(event, search)}
@@ -127,7 +127,17 @@ export default function Weather() {
                                 </Col>
                                 <Col className={'weatherFirstRowCol'} sm={12} md={6} lg={8}>
                                     <h3>City: {city}</h3>
-                                    <h2>{`${countryName}: ${countryFlag}`}</h2>
+                                    <h2>Country: {`${countryName}`}</h2>
+                                    <div className={'d-flex'}>
+                                        <div className={'me-1'}>Flag:</div>
+                                        <div>
+                                            {
+                                                country!=="N/A" ?
+                                                    <img className={'rounded'} style={{width: 30}} src={countryFlag} alt={'country flag'}/>
+                                                    : "N/A"
+                                            }
+                                        </div>
+                                    </div>
                                     <div>Weather: {description}</div>
                                     <div>Temperature: {Math.floor(temperature)}°C</div>
                                     <div>Country code: {country}</div>

@@ -51,6 +51,15 @@
     font-weight: 700;
 }
 
+@media only screen and (max-width: 780px) {
+    .weatherImage {
+        width: 40%;
+        height: 40%;
+        padding: 10px;
+        border-radius: 20px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .inputLabel {
         width: 60vw;
